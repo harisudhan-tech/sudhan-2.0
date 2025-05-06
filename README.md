@@ -7,7 +7,7 @@
     <h2>Simple Addition Calculator</h2>
     <p>Enter two numbers:</p>
 
-    <input type="number" id="num1" placeholder="First number">
+    <input type="number" id="num1" placeholder="third number">
     <input type="number" id="num2" placeholder="Second number">
     <button onclick="calculate()">Add</button>
 
