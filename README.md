@@ -1,21 +1,28 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Calculator</title>
+    <title>Baggage Weight Checker</title>
+    <script>
+        function checkBaggageWeight() {
+            const weight = parseFloat(document.getElementById("baggageInput").value);
+            
+            if (isNaN(weight)) {
+                alert("Please enter a valid number.");
+                return;
+            }
+
+            if (weight > 15) {
+                alert("Baggage exceeds the 15kg allowance.");
+            } else {
+                alert("Baggage is within the allowed limit.");
+            }
+        }
+    </script>
 </head>
 <body>
-    <h2>Simple Addition Calculator</h2>
-    <p>Enter two numbers:</p>
+    <h2>Baggage Weight Checker</h2>
+    <label for="baggageInput">Enter baggage weight (kg):</label>
+    <input type="number" id="baggageInput" placeholder="e.g. 12.5">
+    <button onclick="checkBaggageWeight()">Check Weight</button>
+</body>
+</html>
 
-    <input type="number" id="num1" placeholder="third number">
-    <input type="number" id="num2" placeholder="Second number">
-    <button onclick="calculate()">Add</button>
-
-    <p>Result: <span id="result">0</span></p>
-
-    <script>
-        function calculate() {
-            var n1 = parseFloat(document.getElementById("num1").value);
-            var n2 = parseFloat(document.getElementById("num2").value);
-            var sum = n1 + n2;
-            document.getElementB
